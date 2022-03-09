@@ -6,8 +6,7 @@ class ArticlesController < ApplicationController
   def new
      @article=Article.new
   end
- 
-  
+
     def create
    @article = Article.new(article_params)
    # @article.save
@@ -20,12 +19,12 @@ class ArticlesController < ApplicationController
         render 'new'
         end
     end
+
 def show
     @articles=Article.all
 end
 
 def destroy
-    
     @article.destroy
     flash[:danger]="Articles was Deleted Successfully"
     redirect_to articles_path
@@ -36,7 +35,6 @@ def edit
 end 
 
 def update
-    
     if @article.update(article_params)
         flash[:success]="Article was updated Succesfully"
         redirect_to article_path(@article)

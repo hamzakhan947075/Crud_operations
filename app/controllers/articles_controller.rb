@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
         end
     end
 def show
-     
+    @articles=Article.all
 end
 
 def destroy

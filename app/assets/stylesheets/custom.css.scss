@@ -40,17 +40,17 @@ $navbar-default-bg: black;
   border-top: 1px solid #eaeaea;
   color: #777;
 }
-footer a:hover {
+.footer a:hover {
   color: #222;
 }
-footer small {
+.footer small {
   float: left;
 }
-footer ul {
+.footer ul {
   float: right;
   list-style: none;
 }
-footer ul li {
+.footer ul li {
   float: left;
   margin-left: 15px;
 }

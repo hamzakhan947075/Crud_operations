@@ -26,6 +26,11 @@
 
     <hr>
     <%= simple_format(@article.description) %>
+ 
+    <% if @article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p>
+    <% end %>
+
     <div class='article-action'>
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
         <%= link_to "Back to the listing page",articles_path,class:"btn btn-xs btn-primary"%>
